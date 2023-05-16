@@ -14,7 +14,7 @@ class ComicsController extends Controller
      */
     public function index()
     {
-        $comics = config('comics');
+        $comics = Comics::all();
         $menuNav = ['CHARACTERS', 'COMICS', 'MOVIES', 'TV', 'GAMES', 'COLLECTIBLES', 'VIDEOS', 'FANS', 'NEWS', 'SHOP'];
         return view('home', compact('comics', 'menuNav'));
     }
