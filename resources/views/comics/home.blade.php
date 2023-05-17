@@ -19,7 +19,11 @@
             </div>
         </div>
         <div class="container-btn">
-            <a href="{{route('comics.create')}}">aggiungi un fumetto</a>
+            <a href="{{route('comics.create')}}">
+                <button>
+                    Aggiungi un fumetto
+                </button>
+            </a>
         {{-- <AppBookshelf ></AppBookshelf> --}}
             <button > <a href ="prova">LOAD MORE</a> </button>
         </div>

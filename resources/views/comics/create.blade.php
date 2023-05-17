@@ -1,8 +1,8 @@
 @extends('layouts/layout')
 @section('content')
-<h2>Aggiungi un fumetto</h2>
 <form class="p-3 d-flex flex-column gap-3" action="{{route('comics.store')}}" method="POST">
     @csrf
+    <h2>Aggiungi un fumetto</h2>
     <div>
         <label for="title">title</label>
         <input type="text" id='title' name="title">

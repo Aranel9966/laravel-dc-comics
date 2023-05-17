@@ -1,4 +1,27 @@
 <footer>
+    <div class="container-menu">
+        <ul>
+            <li>
+                <img src="{{Vite::asset('resources/images/buy-comics-digital-comics.png')}}" alt="">
+                Digital Comics
+            </li>
+            <li>
+                <img src="{{Vite::asset('resources/images/buy-comics-merchandise.png')}}" alt="">
+                Merchandise
+            </li>
+            <li>
+                <img src="{{Vite::asset('resources/images/buy-comics-shop-locator.png')}}" alt="">
+                Shop Locator
+            </li>
+            <li>
+                <img src="{{Vite::asset('resources/images/buy-comics-subscriptions.png')}}" alt="">
+                Subscriptions
+            <li>
+                <img src="{{Vite::asset('resources/images/buy-dc-power-visa.svg')}}" alt="">
+                Power Visa
+            </li>
+        </ul>
+    </div>
     <div class="containerBackground">
         <div class="containerLeft">
             <div class="col">
