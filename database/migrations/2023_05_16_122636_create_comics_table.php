@@ -21,10 +21,10 @@ return new class extends Migration
             $table->text('thumb');
             $table->string('price', 20);
             $table->string('series');
-            $table->date('sale_date');
+            $table->date('sale_date')->nullable();
             $table->string('type');
-            $table->string('artists');
-            $table->string('writers');
+            $table->string('artists')->nullable();
+            $table->string('writers')->nullable();
 
             $table->timestamps();
         });

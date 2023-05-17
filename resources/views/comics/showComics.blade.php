@@ -3,32 +3,35 @@
 
 @section('content')
 
-<main class="text-center">
-  <img src="{{$comic->thumb}}" alt="comic">
+<main class="d-flex p-3">
+  <img style="height:500px" src="{{$comic->thumb}}" alt="comic">
 
   <hr>
   {{-- {{dd ($comic)}} --}}
+  <div class="container-md d-flex flex-column gap-3">
 
-  <h1>{{$comic->title}}</h1>
+    <h2>{{$comic->title}}</h2>
+  
+    <ul class="text-left d-flex flex-column gap-3">
+      <li>
+        Tipo: {{$comic->type}}
+      </li>
+      <li>
+        Data di uscita: {{$comic->sale_date}}
+      </li>
+      <li>
+        prezzo: {{$comic->price}}
+      </li>
+      <li>
+        Serie: {{$comic->series}}
+      </li>
+    </ul>
+    <h4>Descrizione:</h4>
+    <p>
+      {{$comic->description}}
+    </p>
+  </div>
 
-  <ul class="text-left">
-    <li>
-      Tipo: {{$comic->type}}
-    </li>
-    <li>
-      Data di uscita: {{$comic->sale_date}}
-    </li>
-    <li>
-      prezzo: {{$comic->price}}
-    </li>
-    <li>
-      Serie: {{$comic->series}}
-    </li>
-  </ul>
-
-  <p>
-    {{$comic->description}}
-  </p>
 </main>
 
 @endsection
