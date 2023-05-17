@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Comics;
+use App\Models\Comic;
 use Illuminate\Http\Request;
 
-class ComicsController extends Controller
+class ComicController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class ComicsController extends Controller
      */
     public function index()
     {
-        $comics = Comics::all();
-        // $menuNav = ['CHARACTERS', 'COMICS', 'MOVIES', 'TV', 'GAMES', 'COLLECTIBLES', 'VIDEOS', 'FANS', 'NEWS', 'SHOP'];
+        $comics = Comic::all();
         return view('comics/home', compact('comics'));
     }
 
@@ -38,8 +37,7 @@ class ComicsController extends Controller
     public function store(Request $request)
     {
         $formData = $request->all();
-        $newComics = new Comics();
-
+        $newComics = new Comic();
         $newComics->fill($formData);
         $newComics->save();
         return redirect()->route('comics.show', $newComics->id);
@@ -48,24 +46,22 @@ class ComicsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Comics  $comics
+     * @param  \App\Models\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function show(Comics $comic)
+    public function show(Comic $comic)
     {
-        // dd($comic);
         return view('comics/showComics', compact('comic'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Comics  $comics
+     * @param  \App\Models\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function edit(Comics $comic)
+    public function edit(Comic $comic)
     {
-        // dd($comic);
         return view('comics/edit', compact('comic'));
     }
 
@@ -73,13 +69,12 @@ class ComicsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Comics  $comics
+     * @param  \App\Models\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comics $comic)
+    public function update(Request $request, Comic $comic)
     {
         $formData = $request->all();
-
         $comic->update($formData);
         $comic->save();
         return redirect()->route('comics.show', $comic->id);
@@ -88,10 +83,10 @@ class ComicsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Comics  $comics
+     * @param  \App\Models\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Comics $comic)
+    public function destroy(Comic $comic)
     {
         $comic->delete();
         return redirect()->route('comics.index');

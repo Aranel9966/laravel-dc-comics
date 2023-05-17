@@ -2,12 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Comics;
+use App\Models\Comic;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-
-class ComicsSeeder extends Seeder
+class ComicSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -19,7 +18,7 @@ class ComicsSeeder extends Seeder
         $arrayComics = config('comics');
 
         foreach ($arrayComics as $singleComics) {
-            $newComics = new Comics();
+            $newComics = new Comic();
 
             $newComics->title = $singleComics['title'];
             $newComics->description = $singleComics['description'];

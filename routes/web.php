@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ComicsController;
+use App\Http\Controllers\ComicController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [ComicsController::class, 'index']);
-Route::resource('/comics', ComicsController::class);
+Route::get('/', [ComicController::class, 'index']);
+Route::resource('/comics', ComicController::class);
