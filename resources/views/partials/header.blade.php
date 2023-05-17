@@ -1,14 +1,12 @@
 <header>
     <nav>
         <div class="logo">
-            <img src="{{Vite::asset('resources/images/favicon.ico')}}" alt="">
+            <a href="/">
+                <img src="{{Vite::asset('resources/images/favicon.ico')}}" alt="">
+            </a>
         </div>
         <div class="menu">
             <ul>
-                {{-- @foreach ($menuNav as $item) --}}
-                {{-- <li >{{$item}}</li> --}}
-                    
-                {{-- @endforeach --}}
                 <li>CHARACTERS</li>
                 <li>COMICS</li>
                 <li>MOVIES</li>

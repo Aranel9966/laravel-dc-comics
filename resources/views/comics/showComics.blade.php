@@ -30,6 +30,13 @@
     <p>
       {{$comic->description}}
     </p>
+    <div class="btn d-flex gap-3">
+      <a href="{{route('comics.edit',$comic->id)}}">
+        <button class="btn btn-primary"> modifica </button>
+      </a>
+      <button class="btn btn-danger">elimina</button>
+      
+    </div>
   </div>
 
 </main>
