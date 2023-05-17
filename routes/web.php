@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [ComicsController::class, 'index']);
+Route::resource('/comics', ComicsController::class);

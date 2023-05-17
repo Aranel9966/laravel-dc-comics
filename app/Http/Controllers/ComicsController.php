@@ -15,8 +15,8 @@ class ComicsController extends Controller
     public function index()
     {
         $comics = Comics::all();
-        $menuNav = ['CHARACTERS', 'COMICS', 'MOVIES', 'TV', 'GAMES', 'COLLECTIBLES', 'VIDEOS', 'FANS', 'NEWS', 'SHOP'];
-        return view('home', compact('comics', 'menuNav'));
+        // $menuNav = ['CHARACTERS', 'COMICS', 'MOVIES', 'TV', 'GAMES', 'COLLECTIBLES', 'VIDEOS', 'FANS', 'NEWS', 'SHOP'];
+        return view('comics/home', compact('comics'));
     }
 
     /**
@@ -46,9 +46,10 @@ class ComicsController extends Controller
      * @param  \App\Models\Comics  $comics
      * @return \Illuminate\Http\Response
      */
-    public function show(Comics $comics)
+    public function show(Comics $comic)
     {
-        //
+        // dd($comic);
+        return view('comics/showComics', compact('comic'));
     }
 
     /**

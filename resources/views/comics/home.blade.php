@@ -9,8 +9,10 @@
             @foreach ($comics as $singleComics)
                 <div class="col-2 comics-card d-flex">
                     <div class="comics-card-inner">
-                        <img src="{{$singleComics['thumb']}}" alt="immagine ">
-                        {{$singleComics['title']}}
+                        <a href="{{route('comics.show',$singleComics->id)}}">
+                            <img src="{{$singleComics['thumb']}}" alt="immagine ">
+                            {{$singleComics['title']}}
+                        </a>
                     </div>
                 </div>
             @endforeach
