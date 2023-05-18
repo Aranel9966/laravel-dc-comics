@@ -5,40 +5,94 @@
     @method('PUT')
     <h2 >Modifica un fumetto</h2>
     <div>
-        <label for="title">Title</label>
-        <input type="text" id='title' value="{{$comic->title}}" name="title">
+        <label for="title">title</label>
+        <input class="  form-control @error('title') is-invalid @enderror" type="text" id='title' name="title" value="{{old('title')??$comic->title}}">
+
+    @error('title')
+        <div class="invalid-feedback">
+          {{$message}}
+        </div>
+      @enderror
     </div>
     <div>
-        <label for="description">Description</label>
-        <input type="text" id='description' value="{{$comic->description}}" name="description">
+        <label for="description">description</label>
+        <textarea  class="form-control @error('description') is-invalid @enderror" type="text" id='description' name="description"  cols="50" rows="2">{{old('description')??$comic->description}}</textarea>
+
+    @error('description')
+        <div class="invalid-feedback">
+          {{$message}}
+        </div>
+      @enderror
     </div>
     <div>
-        <label for="thumb">Thumb</label>
-        <input type="text" id='thumb' value="{{$comic->thumb}}" name="thumb">
+        <label for="thumb">thumb</label>
+        <input class="form-control @error('thumb') is-invalid @enderror" type="text" id='thumb' name="thumb" value="{{old('thumb')??$comic->thumb}}">
+
+    @error('thumb')
+        <div class="invalid-feedback">
+          {{$message}}
+        </div>
+      @enderror
     </div>
     <div>
-        <label for="price">Price</label>
-        <input type="text" id='price' value="{{$comic->price}}" name="price">
+        <label for="price">price</label>
+        <input class="form-control @error('price') is-invalid @enderror" type="text" id='price' name="price"value="{{old('price')??$comic->price}}">
+
+    @error('price')
+        <div class="invalid-feedback">
+          {{$message}}
+        </div>
+      @enderror
     </div>
     <div>
-        <label for="series">Series</label>
-        <input type="text" id='series' value="{{$comic->series}}" name="series">
+        <label for="series">series</label>
+        <input class="form-control @error('series') is-invalid @enderror" type="text" id='series' name="series" value="{{old('series')??$comic->series}}">
+
+    @error('series')
+        <div class="invalid-feedback">
+          {{$message}}
+        </div>
+      @enderror
     </div>
     <div>
-        <label for="sale_date">Sale_date</label>
-        <input type="date" id='sale_date' value="{{$comic->sale_date}}" name="sale_date">
+        <label for="sale_date">sale_date</label>
+        <input class="form-control @error('sale_date') is-invalid @enderror" type="date" id='sale_date' name="sale_date" value="{{old('sale_date')??$comic->sale_date}}">
+
+    @error('sale_date')
+        <div class="invalid-feedback">
+          {{$message}}
+        </div>
+      @enderror
     </div>
     <div>
-        <label for="type">Type</label>
-        <input type="text" id='type' value="{{$comic->type}}" name="type">
+        <label for="type">type</label>
+        <input class="form-control @error('type') is-invalid @enderror" type="text" id='type' name="type" value="{{old('type')??$comic->type}}">
+
+    @error('type')
+        <div class="invalid-feedback">
+          {{$message}}
+        </div>
+      @enderror
     </div>
     <div>
-        <label for="artists">Artists</label>
-        <input type="text" id='artists' value="{{$comic->artists}}" name="artists">
+        <label for="artists">artists</label>
+        <input class="form-control @error('artists') is-invalid @enderror" type="text" id='artists' name="artists" value="{{old('artists')??$comic->artists}}">
+
+    @error('artists')
+        <div class="invalid-feedback">
+          {{$message}}
+        </div>
+      @enderror
     </div>
     <div>
-        <label for="writers">Writers</label>
-        <input type="text" id='writers' value="{{$comic->writers}}" name="writers">
+        <label for="writers">writers</label>
+        <input class="form-control @error('writers') is-invalid @enderror" type="text" id='writers' name="writers" value="{{old('writers')??$comic->writers}}">
+
+    @error('writers')
+        <div class="invalid-feedback">
+          {{$message}}
+        </div>
+      @enderror
     </div>
     <div>
         <button class="btn btn-primary" type="submit">salva</button>

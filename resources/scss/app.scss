@@ -183,19 +183,20 @@ footer{
     }
 }
 form{
-    background-color: #a03c3c;
-    // width: 800px;
-    text-align: center;
-    margin: auto;
+    background-color: #97c3ed;
+    display: flex;
+    align-items: center;
     div{
         display: flex;
         justify-content: center;
+        flex-direction: column;
+
+        width: 400px;
         input{
-            width: 500px;
             padding: 5px;
         }
         label{
-            padding: 5px;
+            padding: 3px;
         }
     }
 }
