@@ -112,7 +112,7 @@ class ComicController extends Controller
             'artists' => 'required|max:50',
             'writers' => 'required|max:50',
         ], [
-            'title.max' => "il titolo non deve essere più lungo di 50 caratteri",
+            'title.max' => "il titolo non deve essere più lungo di :max caratteri",
             'title.required' => "Il titolo deve essere indicato",
 
             'description.min' => "La descrizione non deve essere meno lunga di 10 caratteri",

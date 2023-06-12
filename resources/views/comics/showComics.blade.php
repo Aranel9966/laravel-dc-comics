@@ -30,7 +30,7 @@
     <p>
       {{$comic->description}}
     </p>
-    <div class="btn d-flex gap-3">
+    <div class=" d-flex gap-3">
       <a href="{{route('comics.edit',$comic->id)}}">
         <button class="btn btn-primary"> modifica </button>
       </a>
@@ -39,7 +39,7 @@
 
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-          <div class="modal-content">
+          <div class="modal-content bg-dark">
             <div class="modal-header">
               <h2 class="modal-title fs-5" id="exampleModalLabel">Eliminazione fumetto</h2>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
